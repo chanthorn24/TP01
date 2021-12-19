@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation & Variable</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 100vw;
+            background-color: #c9d1d2;
+        }
+        
+        .wrapper .drop {
+            /* transform: translateY(-120px); */
+            animation: drop 1s ease-in-out;
+            animation-delay: calc(var(--order) * 150ms);
+            padding: 30px;
+            font-size: 2em;
+        }
+        
+        @keyframes drop {
+            from {
+                transform: translateY(-120px);
+            }
+            to {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <span class="drop" style="--order: 1"> 😝 </span>
+        <span class="drop" style="--order: 2"> 🥳 </span>
+        <span class="drop" style="--order: 3"> 😜 </span>
+    </div>
+</body>
+
+</html>
